@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>108</y>
+      <w>243</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;System&gt;&gt;
+Bill
+--
+-billType: string
+-billAmount: double
+-discountCode: string
+--
++SetBillType(billType : string)
++GetBillType(): string
++SetAmount(amount : double)
++GetAmount(): double
++SetDiscountCode(discountCode: string)
++GetDiscountCode(): string
++ShowOrderDetails(): order
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>99</y>
+      <w>243</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;User&gt;&gt;
+Order
+
+--
+-orderId: string
+-orderDetails: order
+-customerName: stirng
+-customerPhone: string
+-customerAddress: string
+--
++GetOrderId(): string
++ShowOrderDetails(): order
++SetCustomerName(name: string)
++GetCustomerName(): string
++SetCustomerPhone(phone: string)
++GetCustomerPhone(): string
++SetCustomerAddress(Address: string)
++GetCustomerAddress(): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>603</x>
+      <y>135</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;User&gt;&gt;
+LogIn
+
+--
+-userId: string
+-password: string
+--
++SetUserId(userId:string)
++GetUserId(): string
++SetPassword(password:string)
++GetPassword(): string
++VerifyInformation() :boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>378</y>
+      <w>207</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;User&gt;&gt;
+Track and Manage Order
+
+--
+-orderId: string
+--
++GetOrderId(): string
++EditOrder()
++SearchOrderDetails(Id:string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>891</x>
+      <y>81</y>
+      <w>243</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;User&gt;&gt;
+SignUp
+
+--
+-Username: string
+-email: string
+-phone: string
+-password: string
+-address: string
+--
++SetName(name:string)
++GetName(): string
++SetEmail(email:string)
++GetEmail(): string
++SetPassword(password:string)
++GetPassword():string
++SetAddress(address:string)
++GetAddress():string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>603</x>
+      <y>378</y>
+      <w>234</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;System&gt;&gt;
+System
+
+--
++signUp: SignUp
++admin: Admin
+--
++AddCustomerAccount(signUp:SignUp)
++AddAdminrAccount(admin:Admin)
++GenerateOrderId(): string
++GenerateAdminId(): string
++confirmOrder(): boolean
++VerifyInformation(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
